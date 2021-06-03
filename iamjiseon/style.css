@@ -1,0 +1,197 @@
+body {
+  font-family: "Wemakeprice-Bold";
+  cursor: default;
+}
+
+@font-face {
+  font-family: "Wemakeprice-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Wemakeprice-Bold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  --color-white: #ffffff;
+  --color-light-white: #eeeeee;
+  --color-dark-white: #bdbdbd;
+  --color-purple: #cbbae7;
+  --color-light-grey: #7c7979;
+  --color-blue: #b2eef8;
+  --color-yellow: #f7e279;
+  --color-orange: #feb546;
+  --color-red: rgb(231, 109, 100);
+  --color-green: #88d6bc;
+  --color-dark-green: teal;
+}
+.section {
+  padding: 50px;
+  text-align: center;
+  margin: auto;
+}
+/* #navbar {
+  position: absolute;
+  left: 50%;
+  margin-left: -170px;
+} */
+/* #navbar {
+  width: 100%;
+  height: 50px;
+  /* margin-left: 100px; */
+/* background-color: burlywood;
+  z-index: 999;
+  display: fiexd;
+} */
+.navbar {
+  position: fixed;
+  z-index: 1;
+  background-color: var(--color-white);
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.navbar__menu {
+  color: var(--color-light-grey);
+  padding: 15px 20px;
+  font-size: 20px;
+}
+.navbar__menu:hover {
+  border-bottom: 2px solid var(--color-light-grey);
+}
+
+.hello {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 220px;
+  height: 800px;
+  width: 100%;
+}
+.hello > img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  /* margin-top: 150px;
+  margin-left: 240px; */
+}
+.hello h1 {
+  color: var(--color-light-grey);
+  font-size: 80px;
+  margin-top: 70px;
+  margin-left: 40px;
+}
+.hello span {
+  font-size: 100px;
+  color: var(--color-yellow);
+}
+#life,
+#like,
+#hate,
+#hobby {
+  width: 100%;
+}
+
+#life {
+  height: 450px;
+  background-color: seashell;
+}
+.life {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 30px;
+}
+#life h1,
+#like h1,
+#hate h1,
+#hobby h1,
+.end h1 {
+  color: var(--color-purple);
+  font-size: 70px;
+}
+/* #life > h2 {
+  margin-top: 20px;
+  font-size: 20px;
+  color: var(--color-dark-white);
+} */
+.speech {
+  display: flex;
+}
+.speech p {
+  color: var(--color-light-grey);
+}
+.speech svg {
+  font-size: 70px;
+  margin-top: 20px;
+  color: var(--color-green);
+}
+.speech1,
+.speech2,
+.speech3 {
+  width: 200px;
+  height: 300px;
+  background-color: var(--color-white);
+  margin: 0 20px;
+  border-radius: 20px;
+  line-height: 70px;
+  text-align: center;
+  font-size: 20px;
+}
+#like,
+#hate {
+  margin-top: 50px;
+  height: 600px;
+}
+#life h2,
+#like h2,
+#hate h2,
+#hobby h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 25px;
+  color: var(--color-dark-white);
+}
+.likes,
+.hates {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.like img,
+.hate img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.like p,
+.hate p {
+  color: var(--color-orange);
+  font-size: 30px;
+  padding: 40px;
+}
+
+.hobbys {
+  display: flex;
+  margin-top: 60px;
+}
+.hobby {
+  width: 100%;
+}
+#hobby {
+  background-color: rgb(248, 234, 234);
+}
+
+.hobby img {
+  width: 300px;
+  height: 400px;
+}
+.end {
+  width: 100%;
+  height: 200px;
+}
+.end h1 {
+  margin-top: 100px;
+}
