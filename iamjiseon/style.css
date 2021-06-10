@@ -56,7 +56,7 @@ body {
   margin-right: 12px;
   color: var(--color-light-grey);
   padding: 12px 20px;
-  font-size: 15px;
+  font-size: 20px;
 }
 .navbar__menu:hover {
   border-bottom: 2px solid var(--color-light-grey);
@@ -232,15 +232,17 @@ body {
     font-size: 12px;
   }
   .hello__photo {
+    width: 250px;
+    height: 250px;
     left: 80px;
     top: 150px;
   }
   .hello__iamjs {
     top: 500px;
-    left: 38px;
+    left: 30px;
   }
-  .hello__iamjs p {
-    font-size: 40px;
+  .hello__iamjs h1 {
+    font-size: 50px;
   }
 
   .hello__iamjs span {
