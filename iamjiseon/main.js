@@ -33,19 +33,20 @@ for(let i=0; i<navbarMenu.length; i++){ //불러온 list를 따로 떼어준다
 
 
   //#hello에 img slide 넣기!
-  const showing = "showing";//.showing을 변수로 지정
+  const showing = "showing";//showing string을 변수로 지정
   const firstPhoto = document.querySelector(".hello__photo:first-child");//왜?순서가 끝났을 때 다시 처음으로 돌리기 위해 따로 지정.
 
   function slide() {  
-    const currentPhoto = document.querySelector(`.${showing}`);//.showing이 추가되었는지 판별하기 위해서 변수에 할당
-    if(currentPhoto){//<1>만약 현재 .showing이 추가된 currentPhoto가 있다면! 근데 null이므로 else실행될 것
+    const currentPhoto = document.querySelector(`.${showing}`);//.showing가 추가된 태그를 받아옴
+    if(currentPhoto){//만약 현재 .showing이 추가된 currentPhoto가 있다면! 근데 null이므로 else실행될 것
       currentPhoto.classList.remove(showing);//.showing를 지우고
 
       const nextPhoto = currentPhoto.nextElementSibling;//currentPhoto의 다음 element를 찾아주는 메소드
           if(nextPhoto){//다음 element가 있으면
             nextPhoto.classList.add(showing);//.showing을 추가해라
-          }else{//다음 element가 없다면(마지막 element)
-            firstPhoto.classList.add(showing);//첫번째 element에 .showing 추가해라
+          }
+          else{//다음 element가 없다면(마지막 element)
+            firstPhoto.classList.add(showing);//firstPhoto에 .showing을 추가해라
           }
 
     }else{
