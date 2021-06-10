@@ -42,18 +42,21 @@ body {
   z-index: 999;
   display: fiexd;
 } */
+
 .navbar {
   position: fixed;
   z-index: 10;
-  background-color: var(--color-white);
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  background-color: var(--color-white);
 }
+
 .navbar__menu {
+  margin-right: 12px;
   color: var(--color-light-grey);
   padding: 12px 20px;
-  font-size: 20px;
+  font-size: 1.3rem;
 }
 .navbar__menu:hover {
   border-bottom: 2px solid var(--color-light-grey);
@@ -74,9 +77,10 @@ body {
   z-index: 0;
   transition: all 0.5s ease-in-out;
   transform: scale(0.9);
-  /* margin-top: 150px;
-  margin-left: 240px; */
 }
+/* margin-top: 150px;
+  margin-left: 240px; */
+
 .showing {
   /*js에서 클래스 이벤트 추가시 사용*/
   opacity: 1;
@@ -84,7 +88,7 @@ body {
   transform: none;
 }
 .hello__iamjs {
-  width: 550px;
+  width: 480px;
   height: 400px;
   position: absolute;
   top: 260px;
@@ -93,10 +97,10 @@ body {
 
 .hello__iamjs h1 {
   color: var(--color-light-grey);
-  font-size: 80px;
+  font-size: 4rem;
 }
 .hello__iamjs span {
-  font-size: 100px;
+  font-size: 6rem;
   color: var(--color-yellow);
 }
 #hello,
@@ -108,7 +112,7 @@ body {
 }
 
 #life {
-  height: 500px;
+  height: 600px;
   background-color: seashell;
 }
 #life > h1 {
@@ -127,7 +131,7 @@ body {
 #hobby h1,
 .end h1 {
   color: var(--color-purple);
-  font-size: 70px;
+  font-size: 5rem;
 }
 /* #life > h2 {
   margin-top: 20px;
@@ -140,6 +144,7 @@ body {
 }
 .life p {
   color: var(--color-light-grey);
+  font-size: 1.3rem;
 }
 .life svg {
   font-size: 70px;
@@ -201,7 +206,7 @@ body {
 
 .hobbys {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   margin-top: 60px;
 }
 
@@ -224,6 +229,9 @@ body {
 
 /* 반응형 */
 @media screen and (max-width: 768px) {
+  .navbar__menu {
+    margin-right: 0px;
+  }
   .hello__photo {
     left: 100px;
     top: 150px;
@@ -239,7 +247,7 @@ body {
     font-size: 80px;
   }
   .life div p {
-    font-size: 17px;
+    font-size: 1rem;
   }
   .like img,
   .hate img {
@@ -253,18 +261,16 @@ body {
   #hate {
     height: 1100px;
   }
-  #hobby {
-    height: 1200px;
+  .likes,
+  .hates {
+    flex-direction: column;
   }
+
   .hobbys {
-    display: grid;
+    flex-direction: column;
   }
   .hobby img {
     width: 200px;
     height: 250px;
-  }
-  .navbar__menu {
-    font-size: 15px;
-    padding: 12px 15px;
   }
 }
