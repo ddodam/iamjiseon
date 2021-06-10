@@ -69,7 +69,11 @@ body {
   border-radius: 50%;
   position: absolute;
   top: 200px;
+<<<<<<< HEAD
   left: 300px;
+=======
+  left: 400px;
+>>>>>>> 29a09791dc6e45986bce28d9b001a85e46ec47e5
   opacity: 1;
   z-index: 0;
   transition: all 0.5s ease-in-out;
@@ -87,8 +91,13 @@ body {
   width: 550px;
   height: 400px;
   position: absolute;
+<<<<<<< HEAD
   top: 280px;
   left: 650px;
+=======
+  top: 250px;
+  left: 700px;
+>>>>>>> 29a09791dc6e45986bce28d9b001a85e46ec47e5
 }
 
 .hello__iamjs h1 {
@@ -263,8 +272,11 @@ body {
     width: 200px;
     height: 250px;
   }
+<<<<<<< HEAD
   .navbar__menu {
     font-size: 15px;
     padding: 12px 15px;
   }
+=======
+>>>>>>> 29a09791dc6e45986bce28d9b001a85e46ec47e5
 }
