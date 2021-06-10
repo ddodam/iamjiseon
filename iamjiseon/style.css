@@ -23,8 +23,9 @@ body {
   --color-green: #88d6bc;
   --color-dark-green: teal;
 }
+
 .section {
-  padding: 50px;
+  padding: 50px 0;
   text-align: center;
   margin: auto;
 }
@@ -43,7 +44,7 @@ body {
 } */
 .navbar {
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   background-color: var(--color-white);
   width: 100%;
   display: flex;
@@ -51,38 +52,54 @@ body {
 }
 .navbar__menu {
   color: var(--color-light-grey);
-  padding: 15px 20px;
+  padding: 12px 20px;
   font-size: 20px;
 }
 .navbar__menu:hover {
   border-bottom: 2px solid var(--color-light-grey);
 }
-
-.hello {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  top: 220px;
-  height: 800px;
+#hello {
   width: 100%;
+  height: 700px;
 }
-.hello > img {
+
+.hello__photo {
   width: 300px;
   height: 300px;
   border-radius: 50%;
+  position: absolute;
+  top: 200px;
+  left: 400px;
+  opacity: 1;
+  z-index: 0;
+  transition: all 0.5s ease-in-out;
+  transform: scale(0.9);
   /* margin-top: 150px;
   margin-left: 240px; */
 }
-.hello h1 {
+.showing {
+  /*js에서 클래스 이벤트 추가시 사용*/
+  opacity: 1;
+  z-index: 1;
+  transform: none;
+}
+.hello__iamjs {
+  width: 550px;
+  height: 400px;
+  position: absolute;
+  top: 250px;
+  left: 700px;
+}
+
+.hello__iamjs h1 {
   color: var(--color-light-grey);
   font-size: 80px;
-  margin-top: 70px;
-  margin-left: 40px;
 }
-.hello span {
+.hello__iamjs span {
   font-size: 100px;
   color: var(--color-yellow);
 }
+#hello,
 #life,
 #like,
 #hate,
@@ -91,16 +108,19 @@ body {
 }
 
 #life {
-  height: 450px;
+  height: 500px;
   background-color: seashell;
 }
-.life {
+#life > h1 {
+  margin-top: 60px;
+}
+/* .life {
   display: flex;
+
   justify-content: center;
   align-items: center;
-
   margin-top: 30px;
-}
+} */
 #life h1,
 #like h1,
 #hate h1,
@@ -114,13 +134,14 @@ body {
   font-size: 20px;
   color: var(--color-dark-white);
 } */
-.speech {
+.life {
   display: flex;
+  justify-content: center;
 }
-.speech p {
+.life p {
   color: var(--color-light-grey);
 }
-.speech svg {
+.life svg {
   font-size: 70px;
   margin-top: 20px;
   color: var(--color-green);
@@ -139,8 +160,8 @@ body {
 }
 #like,
 #hate {
-  margin-top: 50px;
-  height: 600px;
+  margin-top: 100px;
+  height: 700px;
 }
 #life h2,
 #like h2,
@@ -151,11 +172,16 @@ body {
   font-size: 25px;
   color: var(--color-dark-white);
 }
+.like__all,
+.hate__all {
+  margin-top: 30px;
+}
 .likes,
 .hates {
   text-align: center;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .like img,
@@ -177,11 +203,10 @@ body {
   display: flex;
   margin-top: 60px;
 }
-.hobby {
-  width: 100%;
-}
+
 #hobby {
   background-color: rgb(248, 234, 234);
+  /* height: 700px; */
 }
 
 .hobby img {
@@ -194,4 +219,47 @@ body {
 }
 .end h1 {
   margin-top: 100px;
+}
+
+/* 반응형 */
+@media screen and (max-width: 768px) {
+  .hello__photo {
+    left: 100px;
+    top: 150px;
+  }
+  .hello__iamjs {
+    top: 500px;
+    left: 2px;
+  }
+  .hello__iamjs h1 {
+    font-size: 50px;
+  }
+  .hello__iamjs span {
+    font-size: 80px;
+  }
+  .life div p {
+    font-size: 17px;
+  }
+  .like img,
+  .hate img {
+    width: 170px;
+    height: 170px;
+  }
+  .hate_all {
+    margin-top: 100px;
+  }
+  #like,
+  #hate {
+    height: 1100px;
+  }
+  #hobby {
+    height: 1200px;
+  }
+  .hobbys {
+    display: grid;
+  }
+  .hobby img {
+    width: 200px;
+    height: 250px;
+  }
 }
