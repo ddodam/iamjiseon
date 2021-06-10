@@ -56,7 +56,7 @@ body {
   margin-right: 12px;
   color: var(--color-light-grey);
   padding: 12px 20px;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 .navbar__menu:hover {
   border-bottom: 2px solid var(--color-light-grey);
@@ -88,8 +88,6 @@ body {
   transform: none;
 }
 .hello__iamjs {
-  width: 480px;
-  height: 400px;
   position: absolute;
   top: 260px;
   left: 650px;
@@ -238,11 +236,9 @@ body {
   }
   .hello__iamjs {
     top: 500px;
-    left: 2px;
+    left: 38px;
   }
-  .hello__iamjs h1 {
-    font-size: 50px;
-  }
+
   .hello__iamjs span {
     font-size: 80px;
   }
@@ -265,7 +261,6 @@ body {
   .hates {
     flex-direction: column;
   }
-
   .hobbys {
     flex-direction: column;
   }
