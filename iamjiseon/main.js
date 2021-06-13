@@ -57,3 +57,27 @@ for(let i=0; i<navbarMenu.length; i++){ //불러온 list를 따로 떼어준다
 
     slide();//함수 호출 
   setInterval(slide,2000);//slide 함수를 반복하게 해줌
+
+
+  // 스크롤 내리면 arrow 보이기
+const arrow = document.querySelector('.arrow');
+
+document.addEventListener('scroll',()=>{//scroll되면 다음처럼 움직여라
+  if(window.scrollY>700){//scrollY:내가 얼마나 스크롤 되었는지 알려준다, 그래서 700보다 많이 스크롤되면
+  arrow.classList.add('up');//arrow에 classlist를 추가해라
+  }else{//그렇지 않으면
+    arrow.classList.remove('up');///arrow에 classlist를 제거해라
+  } 
+});
+
+//arrow클릭하면 #hello찾아가기
+const hello = document.querySelector('#hello');
+arrow.addEventListener('click',()=>{//arrow을 클릭하면
+
+  function scrollIntoView(){
+  hello.scrollIntoView({behavior : 'smooth'});//hello로 scroll되도록 지정
+  }
+  scrollIntoView();
+});
+
+
